@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Azizul Hasan Raihan">
+    <title>Todo App</title>
+    <style>
+	*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	}
+        h1 {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #767676;
+            color: #ffffff;
+        }
+
+        table {
+            margin: 10px auto;
+            border-collapse: collapse;
+        }
+
+        table thead tr th,
+        table tbody tr td {
+            padding: 10px;
+        }
+
+        button#DeleteBtn {
+            background: #d35454;
+            padding: 10px;
+            color: white;
+            border: none;
+        }
+
+        button#EditBtn {
+            background: #468aa6;
+            padding: 10px;
+            color: white;
+            border: none;
+        }
+
+        button#AddBtn {
+            background: #11ce71;
+            padding: 10px;
+            color: white;
+            border: none;
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+        }
+
+        input#title {
+            padding: 10px;
+            border: none;
+        }
+
+        input#desc {
+            padding: 10px;
+            border: none;
+            width: calc(100% - 25px);
+        }
+
+
+        input#editTitle {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+
+        input#editDesc {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+
+        button#editTodoBtn {
+            padding: 10px;
+            border: none;
+            background: #3ca56d;
+            color: white;
+            margin: 10px;
+        }
+
+        button#cencelTodoBtn {
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            background: #ff5f5f;
+            color: white;
+        }
+        .d-none{
+            display: none !important;
+        }
+		input#updateInputTitle {
+    padding: 10px;
+    border: none;
+	width:100%;
+	
+}
+
+div#update {
+    margin: 10px auto;
+    max-width: 500px;
+    display: block;
+    background: #b4cce2;
+    padding: 16px;
+}
+
+textarea#updateInputDesc {
+    padding: 10px;
+    border: none;
+	width:100%;
+	margin:10px 0;
+}
+
+button#updateInputBtn {
+    padding: 10px;
+    border: none;
+    margin: 5px 0;
+    color: white;
+    background: #0f960f;
+}
+button#updateCencel {
+    padding: 10px;
+    border: none;
+    background: #ff5858;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo App</h1>
+        <table border="1">
+            <center><span id="emptyMsg"></span></center>
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                    <td>jjj</td>
+                    <td>Lorem ipsum dolor sit.</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</td>
+                    <td>
+                        <button id="EditBtn">Edit</button>
+                        <button id="DeleteBtn">Delete</button>
+                    </td>
+                </tr> -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="text" id="title" placeholder="Todo Title"></td>
+                    <td colspan="2"><input type="text" id="desc" placeholder="Todo Description"></td>
+                    <td><button id="AddBtn">Add</button></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+
+    <div id="update" class="d-none">
+	<input type="text" id="updateInputTitle">
+	<textarea id="updateInputDesc" rows="5"></textarea>
+	<button id="updateInputBtn">Update</button>
+	<button id="updateCencel">Cencel</button>
+	</div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
